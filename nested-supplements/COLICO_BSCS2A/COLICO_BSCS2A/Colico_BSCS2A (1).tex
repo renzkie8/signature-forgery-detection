@@ -1,0 +1,152 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{float}
+\geometry{a4paper, margin=1in}
+
+\title{\textbf{Signature Forgery Detection: The Use of Combining Convolutional Networks and Generative Adversarial in Computer Vision}}
+\author{Carl Renz Colico \\ College of Computer Studies \\ Camarines Sur Polytechnic Colleges \\ \texttt{cacolico@my.cspc.edu.ph}}
+
+
+
+
+\begin{document}
+
+\title{\textbf{Signature Forgery Detection: The Use of Combining Convolutional Networks and Generative Adversarial in Computer Vision}}
+\author{Carl Renz Colico \\ College of Computer Studies \\ Camarines Sur Polytechnic Colleges \\ \texttt{cacolico@my.cspc.edu.ph}}
+
+\maketitle
+
+
+
+\begin{abstract}
+In the digital era, forgery techniques have evolved, posing challenges to documents, bank accounts, and other forms of authentication. Augmented computer vision systematically advances machine learning models that offer rigorous methods for analyzing intricate patterns and anomalies, ensuring that authentic works are distinguishable from deceptive imitations. This study utilized a Convolutional Networks model combined with Generative Adversarial methods to enhance the capability of discerning authentic creations. The dataset used is classified into two folders containing several images of genuine and forged signatures.
+\end{abstract}
+
+\section{Introduction}
+In the perpetually advancing sphere of forgery, contemporary methodologies inscribe with the advent of forgery detection techniques that have been progressively inadequate. In retaliation, the advancement of one of the most revolutionary technologies, Artificial Intelligence (AI), becomes crucial, as these not only confront daily challenges related to forgeries in many large organizations such as governments, banks, and national forensic services that use it for identity verification purposes. Signatures are often referred to as the brain’s fingerprint because every handwriting is unique. However, signatures can be forged easily, and in the Philippines, there are certainly not enough forgery specialists. AI can help fill that gap by learning from countless images of authentic and forged handwriting, enabling it to identify patterns.
+
+The dataset consists of labeled folders:
+\begin{itemize}
+    \item Genuine signatures labeled as \texttt{gen}
+    \item Forged signatures labeled as \texttt{forg}
+\end{itemize}
+Each folder contains 10 images of signatures in common formats like JPEG. This structure allows for easy identification and comparison of genuine and forged signatures. The learning paradigm of this two-model learning approach begins with a Generative Adversarial Network (GAN), where the generator creates forged signatures that try to fool the discriminator until it becomes proficient at producing highly realistic forgeries. The data is then processed by a Convolutional Neural Network (CNN) to filter pre-learned recognition structures and classify the signatures through a supervised algorithm. The GAN, operating unsupervised, learns to distinguish real from fake signatures without considering labels, generating new synthetic forged signatures that the CNN then processes for predictions.
+
+\section{Related Work}
+
+The literature relevant to this study is gathered from a variety of sources, including Google Scholar, Academia, IEEE Xplore, ScienceDirect, and ResearchGate. These studies guide the researchers in developing the current study further. The studies that follow offer more details that aid the reader in comprehending this study.
+
+One of the most widely used and recognized biometric hallmarks, signatures have been used since ancient times to confirm the identities of people, whether they be on documents, forms, bank checks, or personal identification cards  \cite{ref5}. According to Plamondon and Srihari Because handwriting is so commonly used in human transactions, machine recognition of handwriting has practical applications, such as reading handwritten notes on a PDA, postal addresses on envelopes, amounts on bank checks, handwritten fields on forms, etc. Handwriting has remained a common way to record information and communicate in daily life even with the advent of A.I. new technologies \cite{ref10}. This overview explains the characteristics of handwritten language and how it is converted into electronic. 
+
+In the research study of Munich and Perona \cite{ref8} it was revealed that a camera based or computer vision based system for visual signature identification focusing on parameterization, it was found that its verification performance has a better accuracy than traditional biometrics. Another study of LeCun et et.al \cite{ref7} suggest that with the change of deep learning in year of discoveries the data sets propogation of algorithm now can compute representation layers of deep convolutional networks in the process of images, video, audio and speech.
+
+Another study of Gideon et al. A signature can be only accepted if its from the intended person, a solution based on Convolutional Neural Network (CNN) is presented where many research has its many of uses. It trained the model with a dataset of signatures and predictions are made as to predict its authencity. This gives that this type of neural network is a common models in concepts of image processing and language \cite{ref3}. Goodfellow et al. conducted a similar study that uses generative adversarial networks (GANs’) that are used to solve generative image of the model problems, generating realistic high-resolution images that present as a problem that set unique challenges and future research opportunities \cite{ref4}. This set of models of algorithm both utilized computer vision and A.I to assist humans solving generating problems through processing images and detecting filter of patterns.
+
+Further studies of Dey et al. represent a SigNet that outperforms the state-of-the-art results of the benchmark signature of datasets. They said that one of the hardest tasks in biometrics and document forensics is offline signature verification as this one requires modeling minute but crucial details between authentic and forged signatures opening up new revenues for research \cite{ref2}.  Depierre et. al says that computer vision is being now a popular state-of-the-art subset field in A.I as it analyze potential automizing capabilities \cite{ref1}. A critical study of analysis conducted by Waelen \cite{ref13} explored the potential ethical and societal implication of computer vision, impacting the datafication practices that could lead to the leakage of privacy from using cameras and facial recognition. Jasmin et al.\cite{ref6} conducted a study that detect forged handwriting through analyzation of Support Vector Machine (SVM).The current study focuses on detecting forgery in a person’s signature or cases where original handwriting was altered or additional characters were added.
+
+Similar study by Qu et.al present a study that feature a verification system based on stroke-hand features. The signatures are analysed dynamically by spatial and time-domain characteristics \cite{ref11}. This study present an advent method of advanced feature that can be added in the future-knowledge of forgery concepts. On the other hand, P et.al \cite{ref9} another study that used real time signature forgery. It was find that undergoing verification is not only difficult but also time consuming. The probability of two signatures even twins or the same person is very less to be the same. To guard against fraud or theft, a system that can distinguish synthetic, genuine and fake signatures is needed.
+
+
+The studies cited demonstrate a significant connection with this research, underscoring the effectiveness of neural networks in digitizing tasks that are traditionally performed manually.
+
+\section{Methods}
+
+This section details the step-by-step process of implementing AI training using neural networks, specifically focusing on convolutional, adversarial neural networks and computer vision that can recognize signatures from the dataset and the generative adversarial capability of GAN will learned from that existing dataset that will also analyzed both the forged and genuine signatures. An adversarially trained ‘discriminator’ is trained to detect the “fake’’ images accurately as possible. The ‘generator’ is trained to produce outputs that cannot be distinguished by discriminator from unlabeled images. The trained GAN will then be integrated into a program that will generate synthetic forgery sample before training the CNN model that will be both classifying the train data and test data where it will learned to classify between fake synthesized by the GAN and real images. They are classified into active and passive approaches. The results of detected and identified by these models is not yet identified but metrics evaluation of yield results will be the accuracy plot percentage/probability of the two signatures that will be both classified, graphical result will also be considered.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{gan_cnn_structure.png} % Replace with your image filename
+    \caption{Structured training of a GAN and CNN}
+\end{figure}
+
+Training a GAN that consists of two-submodel. The discriminator, D will be feeding a non-labeled signatures images and train the discriminator model to recognize between fake (synthesizing image). The generator, G learns to fool the discriminator in creating fake samples and until the generator gets so good that D can no longer pick out between the real or fake sample from the domain set, once the discriminator can either determine whose real or fake it will update its model and generate a synthesized image (fake).
+
+Training implementation as CNN’s, Convolutional Neural Network recognize the patterns of the image data implementing the generator and discriminator scenario. The CNN will be trained with two-datasets labeled model between genuine and forge signatures that will recognize signatures between real and fake and later on the generated synthesize image of GAN.
+
+In this study, a supervised learning and unsupervised learning method will be used in training these models to show if genuine and forged signatures were correctly or incorrectly classified, also if the generated synthetic image of GAN will be by passed by and detect anomalies or subtle variations or we called min-max by CNN. 
+
+\textbf{Convolutional Neural Network (CNN)} is a deep learning models that is primarily used in computer and natural language classification. The choice of platform will depend on factors like ease of use and availability of the pre-build libraries. The network model will be trained using the supervised learning, where the model will be trained on labeled data hierarchies such as edges, textures, patterns of the data.
+
+\textbf{Supervised Learning (SL)} is a type of modeled training data that involves training the model on labeled data (discrete class labels). CNN models will be trained using supervised learning for it goal to classify the correct output for each output is unknown until the model learns to map the given data to correct output (genuine).
+
+\textbf{Generative Adversarial Network (GAN)} is a generative type of model data that is primarily augmented in training dataset this model discovers underlying patterns in the input data (images) and generates new sample from it and help a CNN learn how to detect synthetic forgeries in a real-life world situation.
+
+\textbf{Unsupervised Learning (UL)} is a type of modeled training data that does not involves the required labeled data for forgeries, as it learns by integrating only images samples to distinguish between real signatures and fake signatures. GAN is a type of unsupervised learning as it only generate realistic forged signatures that resemble the genuine signature style of the real signatures. It focuses on learning the distributions of the data and generating synthetic samples rather than making use of the explicit classification labels.
+
+
+\textbf{The Datasets}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{001gen.png}
+    \\ \textbf{001gen}
+    
+    \includegraphics[width=0.8\textwidth]{001forg.png} % 
+    \\ \textbf{001forg}
+    \caption{Sample images from the dataset}
+\end{figure}
+
+
+
+
+The data sets utilized to this study were sourced from a well-known computer science and machine learning platform Kaggle Repositories \cite{ref12}. Since the data sets obtained for the data was only the partial study’s requirements. The data set is composed of images of signatures that has two types of folders one is for genuine and the other is forgery signature with a quantity of 10 images each folders. The images vary in terms of aspect ratio, lighting conditions, stroke details, camera angle, background, curves, and noise.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{table1.png}
+    \caption{Table 1: Dataset Information for CNN }
+\end{figure}
+
+The obtained data set will require preprocessing along with the created data set before being used in the neural network. Each image will be labeled, resized to 128x128 pixels for more detailed images, and will be categorized in terms of value. The signature images containing both real and genuine and forged signatures will be fed non-labeled into the discriminator. It will first classify them as genuine or forged that will classify them both as fake. The data set will be divided into three: training, validation, and testing. The distribution of the data set will depend on how well the program works using different methods of training the different neural network.
+
+
+\bibliographystyle{apa}
+
+\begin{thebibliography}{13}
+
+\bibitem{ref1}
+Depierre, A., Dellandréa, E., \& Chen, L. (2018, March 30). Jacquard: a large scale dataset for robotic grasp detection. \textit{arXiv.org}. https://arxiv.org/abs/1803.11469
+
+\bibitem{ref2}
+Dey, S., Dutta, A., Toledo, J. I., Ghosh, S. K., Llados, J., \& Pal, U. (2017, July 7). SIGNET: Convolutional Siamese Network for writer Independent Offline Signature Verification. \textit{arXiv.org}. https://arxiv.org/abs/1707.02131
+
+\bibitem{ref3}
+Gideon, S. J., Kandulna, A., Kujur, A. A., Diana, A., \& Raimond, K. (2018). Handwritten Signature Forgery Detection using Convolutional Neural Networks. \textit{Procedia Computer Science}, 143, 978–987. https://doi.org/10.1016/j.procs.2018.10.336
+
+\bibitem{ref4}
+Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Warde-Farley, D., Ozair, S., Courville, A., \& Bengio, Y. (2020). Generative adversarial networks. \textit{Communications of the ACM}, 63(11), 139–144. https://doi.org/10.1145/3422622
+
+\bibitem{ref5}
+Jaiswal, S., Bhadauria, S. S., \& Jadon, D. S. (1970, January 1). BIOMETRIC: CASE STUDY. \textit{Open Access Journals}. https://www.rroij.com/open-access/biometric-case-study.php?aid=37655
+
+\bibitem{ref6}
+Jasmin, M. C. Q., Cruz, M. J. F. D., \& Yumang, A. N. (2022). Detection of forged handwriting through analyzation of handwritten characters using support vector machine. In \textit{2022 IEEE International Conference on Artificial Intelligence in Engineering and Technology (IICAIET)}. https://doi.org/10.1109/iicaiet55139.2022.9936769
+
+\bibitem{ref7}
+LeCun, Y., Bengio, Y., \& Hinton, G. (2015). Deep learning. \textit{Nature}, 521(7553), 436–444. https://doi.org/10.1038/nature14539
+
+\bibitem{ref8}
+Munich, M., \& Perona, P. (2003). Visual identification by signature tracking. \textit{IEEE Transactions on Pattern Analysis and Machine Intelligence}, 25(2), 200–217. https://doi.org/10.1109/tpami.2003.1177152
+
+\bibitem{ref9}
+P, G., G, S., K, K. R., J, K. N. K., \& N, K. (2022). Real time signature forgery detection using machine learning. In \textit{2022 Second International Conference on Advances in Electrical, Computing, Communication and Sustainable Technologies (ICAECT)}. https://doi.org/10.1109/icaect54875.2022.9807905
+
+\bibitem{ref10}
+Plamondon, R., \& Srihari, S. (2000). Online and off-line handwriting recognition: a comprehensive survey. \textit{IEEE Transactions on Pattern Analysis and Machine Intelligence}, 22(1), 63–84. https://doi.org/10.1109/34.824821
+
+\bibitem{ref11}
+Qu, N. T., Saddik, N. a. E., \& Adler, A. (2004). Dynamic signature verification system using stroked based features. \textit{IEEE Transactions on Human-Machine Systems}, 34(3), 316–323. https://doi.org/10.1109/have.2003.1244730
+
+\bibitem{ref12}
+Signature Verification Dataset. (2024, June 2). \textit{Kaggle}. https://www.kaggle.com/datasets/akashgundu/signature-verification-dataset
+
+\bibitem{ref13}
+Waelen, R. (2023). The power of computer vision: a critical analysis. https://doi.org/10.3990/1.9789036557948
+
+\end{thebibliography}
+
+
+\end{document}

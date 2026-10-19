@@ -1,0 +1,33 @@
+# Available files
+
+- `.gitignore`
+- `Colico_Intro-to-AI_ProjectProposal-variant-aae9f41a.docx`
+- `Colico_Intro-to-AI_ProjectProposal.docx`
+- `DATA.md`
+- `README.md`
+- `VALIDATION.md`
+- `cnn_loss_ACC/cnn_loss_and_accuracy_epoch_1.png`
+- `cnn_loss_ACC/cnn_loss_and_accuracy_epoch_10.png`
+- `cnn_loss_ACC/cnn_loss_and_accuracy_epoch_12.png`
+- `cnn_loss_ACC/cnn_loss_and_accuracy_epoch_18.png`
+- `cnn_loss_ACC/cnn_loss_and_accuracy_epoch_6.png`
+- `final-study/Colico_BSCS2A (1).tex`
+- `final-study/Colico_Intro-to-AI_Final-Project.pdf`
+- `final-study/FP_Colico_CarlRenz_BSCS2A.ipynb`
+- `gan/gan_loss_and_accuracy_epoch_1.png`
+- `gan/gan_loss_and_accuracy_epoch_12.png`
+- `gan/gan_loss_and_accuracy_epoch_18.png`
+- `gan/gan_loss_and_accuracy_epoch_6.png`
+- `midterm/COLICO_BSCS2A/Colico_BSCS2A (1).tex`
+- `midterm/COLICO_BSCS2A/Colico_BSCS2A.pdf`
+- `midterm/Colico_Intro-to-AI_ProjectProposal.docx`
+- `midterm/Colico_Intro-to-AI_ProjectProposal.pdf`
+- `midterm/Intro_to_AI_Midterm_Project_revised.docx`
+- `midterm/Intro_to_AI_Midterm_Project_revised.pdf`
+- `midterm/Intro_to_AI_Midterm_Project_revised1.pdf`
+- `midterm/Intro_to_AI_Midterm_Project_revised_REAL.pdf`
+- `midterm/Midterm Project Specification.pdf`
+- `midterm/gan_cnn_structure.png`
+- `nested-supplements/COLICO_BSCS2A/COLICO_BSCS2A/Colico_BSCS2A (1).tex`
+- `nested-supplements/Intro_to_AI_Midterm_Project_revised/Intro_to_AI_Midterm_Project_revised.docx`
+- `signature_forgery_detection_use_of_cnn_and_gan.ipynb`
